@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <Text>Hello world from frontend!</Text>
-      <Text>{data || "Loading..."}</Text>
+      <Text>{data || "Loading text from backend..."}</Text>
     </>
   );
 };
