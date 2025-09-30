@@ -1,0 +1,44 @@
+name: Forge Deploy to development
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Forge CLI
+        run: npm install --global @forge/cli
+
+      - name: Configure Forge
+        run: |
+          forge settings set usage-analytics false
+        env:
+          FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
+          FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
+
+      - name: Lint code
+        run: forge lint
+
+      - name: Deploy to development
+        run: forge deploy -e development --non-interactive
+        env:
+          FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
+          FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
