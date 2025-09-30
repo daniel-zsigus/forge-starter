@@ -15,6 +15,7 @@ const App = () => {
     <>
       <Text>Hello world from frontend!</Text>
       <Text>{data || "Loading text from backend..."}</Text>
+      <Text>Feature-3</Text>
     </>
   );
 };
