@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <>
-      <Text>Hello world!</Text>
+      <Text>Hello world from frontend!</Text>
       <Text>{data || "Loading..."}</Text>
     </>
   );
