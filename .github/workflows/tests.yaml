@@ -1,4 +1,4 @@
-name: Forge Lint on pull requests
+name: Run forge lint and tests on pull requests
 
 on:
   pull_request:
@@ -44,3 +44,6 @@ jobs:
         env:
           FORGE_EMAIL: ${{ secrets.FORGE_EMAIL }}
           FORGE_API_TOKEN: ${{ secrets.FORGE_API_TOKEN }}
+
+      - name: Run tests
+        run: npm test
