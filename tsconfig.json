@@ -15,9 +15,6 @@
     "isolatedModules": true,
     "importHelpers": true,
     "jsx": "react",
-    "strict": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "strict": true
   }
 }

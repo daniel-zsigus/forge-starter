@@ -1,7 +1,7 @@
-import { ResolverTypeDefs } from "@/shared/types";
 import { makeInvoke } from "@forge/bridge";
 import ForgeReconciler, { Text } from "@forge/react";
 import React, { useEffect, useState } from "react";
+import { ResolverTypeDefs } from "../shared/types";
 
 const invoke = makeInvoke<ResolverTypeDefs>();
 
