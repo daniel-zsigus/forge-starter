@@ -1,5 +1,5 @@
+import { ResolverTypeDefs } from "@/shared/types";
 import { makeResolver } from "@forge/resolver";
-import { ResolverTypeDefs } from "../shared/types";
 
 export const handler = makeResolver<ResolverTypeDefs>({
   async getText() {

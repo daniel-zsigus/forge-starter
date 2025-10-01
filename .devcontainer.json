@@ -8,7 +8,9 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "yoavbls.pretty-ts-errors",
-        "sonarsource.sonarlint-vscode"
+        "sonarsource.sonarlint-vscode",
+        "steoates.autoimport",
+        "usernamehw.errorlens"
       ],
       "settings": {
         "terminal.integrated.shell.linux": "/bin/bash"

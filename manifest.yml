@@ -1,16 +1,16 @@
 modules:
   jira:globalPage:
     - key: forge-uikit-test-global-page
-      resource: main
+      resource: frontend
       resolver:
-        function: resolver
+        function: backend
       render: native
       title: forge-uikit-test
   function:
-    - key: resolver
+    - key: backend
       handler: index.handler
 resources:
-  - key: main
+  - key: frontend
     path: src/frontend/index.tsx
 app:
   runtime:
